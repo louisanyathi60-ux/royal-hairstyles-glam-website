@@ -1,209 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Royal Hairstyles Salon</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin:0;
-  font-family:Poppins;
-  scroll-behavior:smooth;
-}
-
-/* HEADER */
-header {
-  background:linear-gradient(90deg, #ff4da6, #6a0dad);
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-/* HERO */
-.hero {
-  padding:90px 20px;
-  text-align:center;
-  background:linear-gradient(120deg, #ff4da6, #6a0dad);
-  color:white;
-}
-
-.hero h2 {
-  font-size:32px;
-  animation:fadeIn 1s ease-in;
-}
-
-.btn {
-  background:white;
-  color:#ff4da6;
-  padding:12px 25px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  box-shadow:0 0 15px rgba(255,77,166,0.6);
-  transition:0.3s;
-}
-
-.btn:hover {
-  transform:scale(1.05);
-}
-
-/* SECTIONS */
-.section {
-  padding:60px 20px;
-  text-align:center;
-  opacity:0;
-  transform:translateY(30px);
-  transition:all 0.6s ease;
-}
-
-.section.show {
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* SERVICES */
-.services {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
-  gap:20px;
-}
-
-.card {
-  background:#ffe6f2;
-  padding:25px;
-  border-radius:15px;
-  transition:0.3s;
-}
-
-.card:hover {
-  transform:translateY(-10px) scale(1.03);
-}
-
-/* GALLERY */
-.gallery {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
-  gap:10px;
-}
-
-.gallery img {
-  width:100%;
-  border-radius:12px;
-  transition:0.3s;
-}
-
-.gallery img:hover {
-  transform:scale(1.05);
-}
-
-/* CONTACT */
-.contact {
-  background:#111;
-  color:white;
-}
-
-/* FOOTER */
-footer {
-  background:linear-gradient(90deg, #ff4da6, #6a0dad);
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-/* WHATSAPP BUTTON */
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  font-size:20px;
-  text-decoration:none;
-  box-shadow:0 0 15px rgba(0,0,0,0.3);
-  animation:float 2s infinite;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
-}
-
-@keyframes float {
-  0% {transform:translateY(0);}
-  50% {transform:translateY(-8px);}
-  100% {transform:translateY(0);}
-}
-</style>
+<title>Royal Hairstyles</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-  <h1>Royal Hairstyles Salon</h1>
-</header>
+<nav>
+  <h3>Royal Hairstyles</h3>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
 <section class="hero">
-  <h2>Glamorous Hair. Confident You.</h2>
-  <p>Your beauty, elevated.</p>
-  <br>
-  <a class="btn" href="https://wa.me/27117641236">Book Now</a>
+  <h1>Glitz & Glam for Gorgeous Hair</h1>
+  <p>Elevate your look with expert styling</p>
+  <a class="btn" href="https://wa.me/27117641236">Book Appointment</a>
 </section>
 
-<section class="section">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">💇‍♀️ Haircuts</div>
-    <div class="card">✨ Braiding</div>
-    <div class="card">🎨 Hair Coloring</div>
-    <div class="card">👑 Wig Installation</div>
-    <div class="card">💆 Treatments</div>
-    <div class="card">👶 Kids Styles</div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Our Work</h2>
-  <div class="gallery">
-    <img src="https://via.placeholder.com/300">
-    <img src="https://via.placeholder.com/300">
-    <img src="https://via.placeholder.com/300">
-    <img src="https://via.placeholder.com/300">
-  </div>
-</section>
-
-<section class="section contact">
-  <h2>Contact Us</h2>
-  <p>📍 Westgate Shopping Centre</p>
-  <p>📞 011 764 1236</p>
-  <p>Open daily</p>
+<section class="grid">
+  <img src="images/hair1.jpg">
+  <img src="images/hair2.jpg">
+  <img src="images/hair3.jpg">
+  <img src="images/hair4.jpg">
 </section>
 
 <footer>
   <p>© 2026 Royal Hairstyles Salon</p>
 </footer>
-
-<!-- FLOATING WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/27117641236">💬</a>
-
-<script>
-// SCROLL ANIMATION
-const sections = document.querySelectorAll('.section');
-
-window.addEventListener('scroll', () => {
-  sections.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      section.classList.add('show');
-    }
-  });
-});
-</script>
 
 </body>
 </html>
